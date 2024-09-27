@@ -9,12 +9,15 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] Camera _mainCamera;
     [SerializeField] float _targetRotation = 0;
 
+    Rigidbody rb;
+
     public static bool playerMovementEnabled = true;
 
     // Start is called before the first frame update
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
