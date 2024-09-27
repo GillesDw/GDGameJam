@@ -1084,7 +1084,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hand: {fileID: 236242075}
-  cam: {fileID: 0}
+  cam: {fileID: 1843273574}
 --- !u!1 &1412429388
 GameObject:
   m_ObjectHideFlags: 0
