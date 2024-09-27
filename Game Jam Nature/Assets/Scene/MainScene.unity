@@ -1352,6 +1352,10 @@ PrefabInstance:
       propertyPath: 'flashlightBattery.Array.data[3]'
       value: 
       objectReference: {fileID: 1843755526}
+    - target: {fileID: 3894713275125036161, guid: e3bc7586170e20b4d8f7c8c398271775, type: 3}
+      propertyPath: flashlightBatteryTimeRecharge1Bar
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3957817897532847077, guid: e3bc7586170e20b4d8f7c8c398271775, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.97

@@ -8,8 +8,10 @@ public class Torch : MonoBehaviour
     private bool flashlightTurnOn = false;
     [SerializeField] List<GameObject> flashlightBattery;
     private float flashlightBatteryTimeLeft;
+    
     [SerializeField] private float maxFlashlightBatteryTime = 10;
-
+    [SerializeField] private float flashlightBatteryTimeRecharge1Bar = 1;
+    float currentReloadingTime = 0;
     private void Awake()
     {
         flashlightBatteryTimeLeft = maxFlashlightBatteryTime;
@@ -52,6 +54,11 @@ public class Torch : MonoBehaviour
         }
 
         UIBattery();
+
+        if (Input.GetKey(KeyCode.R)) 
+        {
+            RechargeFlashlight();
+        }
     }
 
     public void UIBattery()
@@ -89,6 +96,19 @@ public class Torch : MonoBehaviour
             for (int i = 0; i < flashlightBattery.Count; i++)
             {
                 flashlightBattery[i].SetActive(false);
+            }
+        }
+    }
+
+    public void RechargeFlashlight()
+    { 
+        currentReloadingTime += Time.deltaTime;
+        if (flashlightBatteryTimeLeft < maxFlashlightBatteryTime)
+        {
+            if (currentReloadingTime >= flashlightBatteryTimeRecharge1Bar)
+            {
+                flashlightBatteryTimeLeft += maxFlashlightBatteryTime / 4;
+                currentReloadingTime = 0;
             }
         }
     }
