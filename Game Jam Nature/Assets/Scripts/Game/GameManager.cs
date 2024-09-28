@@ -97,5 +97,6 @@ public class GameManager : MonoBehaviour
         footstepsSrc.clip = footstepsClip[rand];
         footstepsSrc.Play();
     }
+
 }
 

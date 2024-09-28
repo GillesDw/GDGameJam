@@ -75,6 +75,27 @@ public class InfectionProgression : MonoBehaviour
 
         }
 
+        if(infectionTime == firstLevelOfInfectionTime)
+        {
+            GameManager.instance.CoughSFX1();
+        }
+        if (infectionTime == secondLevelOfInfectionTime)
+        {
+            GameManager.instance.CoughSFX2();
+        }
+        if (infectionTime == thirdLevelOfInfectionTime)
+        {
+            GameManager.instance.CoughSFX3();
+        }
+        if (infectionTime == fourthLevelOfInfectionTime)
+        {
+            GameManager.instance.CoughSFX4();
+        }
+        if (infectionTime == fifthLevelOfInfectionTime)
+        {
+            GameManager.instance.CoughSFX5();
+        }
+
         if (infectionTime <= 0)
         {
             GameManager.instance.GameOver();
