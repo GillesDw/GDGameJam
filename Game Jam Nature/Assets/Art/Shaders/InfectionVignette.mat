@@ -41,7 +41,7 @@ Material:
     - _Vignette_Blur: 0
     - _Vignette_Darkening: 1
     - _Vignette_Radius: 0.23
-    - _Vignette_Smoothness: 1
+    - _Vignette_Smoothness: 10
     - _Vignette_Speed: 2.18
     m_Colors:
     - _Tint: {r: 0.65195984, g: 0.120762475, b: 0.8930817, a: 0}
