@@ -13,6 +13,8 @@ public class Torch : MonoBehaviour
     [SerializeField] private float flashlightBatteryTimeRecharge1Bar = 1;
     float currentReloadingTime = 0;
     [SerializeField] Camera camera;
+    [SerializeField] GameObject handle;
+    [SerializeField] float rotationSpeed;
     private void Awake()
     {
         flashlightBatteryTimeLeft = maxFlashlightBatteryTime;
@@ -68,6 +70,9 @@ public class Torch : MonoBehaviour
         if (Input.GetKey(KeyCode.R)) 
         {
             RechargeFlashlight();
+            handle.transform.Rotate(0, rotationSpeed, 0);
+
+
         }
     }
 
