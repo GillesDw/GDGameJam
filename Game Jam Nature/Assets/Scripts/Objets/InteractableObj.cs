@@ -10,7 +10,7 @@ public class InteractableObj : MonoBehaviour, IInteractable
         Debug.Log("pick");
     }
 
-    private void ReturnButton()
+    public void ReturnButton()
     {
         obj.SetActive(false);
     }
