@@ -1,10 +1,16 @@
 using UnityEditor.Sprites;
 using UnityEngine;
 
-public class EndGameInteractable : MonoBehaviour, IInteractable
+public class EndGameInteractable : MonoBehaviour
 {
-    public void Interact()
+    private void OnTriggerEnter(Collision collision)
     {
-        GameManager.instance.EndOfTheGame();
+        if(DNAManager.currentDnaCount < 1)
+        {
+            if(collision.gameObject.CompareTag("Player"))
+            {
+                GameManager.instance.EndOfTheGame();
+            }
+        }
     }
 }
