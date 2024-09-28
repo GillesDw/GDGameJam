@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &126058471871912913
 Transform:
   m_ObjectHideFlags: 0
@@ -44,7 +44,7 @@ Light:
   serializedVersion: 11
   m_Type: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 100000
+  m_Intensity: 3183.0989
   m_Range: 10
   m_SpotAngle: 63.601166
   m_InnerSpotAngle: 21.80208
@@ -87,7 +87,7 @@ Light:
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.5, y: 0.5}
   m_BounceIntensity: 1
-  m_ColorTemperature: 5342
+  m_ColorTemperature: 3983
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
@@ -120,7 +120,7 @@ MonoBehaviour:
   m_InnerSpotPercent: 52.831047
   m_SpotIESCutoffPercent: 100
   m_LightDimmer: 1
-  m_VolumetricDimmer: 6.53
+  m_VolumetricDimmer: 4.4
   m_FadeDistance: 10000
   m_VolumetricFadeDistance: 10000
   m_AffectDiffuse: 1
@@ -636,6 +636,7 @@ MonoBehaviour:
   - {fileID: 0}
   maxFlashlightBatteryTime: 10
   flashlightBatteryTimeRecharge1Bar: 1
+  camera: {fileID: 6182619775650601272}
 --- !u!1 &9186880842897589715
 GameObject:
   m_ObjectHideFlags: 0
@@ -651,7 +652,7 @@ GameObject:
   - component: {fileID: 5409256059025601173}
   - component: {fileID: 4729900921426628238}
   - component: {fileID: 3708237086162127898}
-  - component: {fileID: 5277233986731224782}
+  - component: {fileID: 3797809210894130433}
   m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
@@ -823,7 +824,7 @@ MonoBehaviour:
   _mainCamera: {fileID: 6182619775650601272}
   _targetRotation: 0
   speedRotation: 180
---- !u!114 &5277233986731224782
+--- !u!114 &3797809210894130433
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -832,23 +833,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 9186880842897589715}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a7b60cb82a34f445943ed1f4c7a759c, type: 3}
+  m_Script: {fileID: 11500000, guid: 5aa3f8f73c7f4b347b3d3b7d30e37081, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
-  groundDrag: 3
-  jumpForce: 2
-  jumpCooldown: 2
-  airMultiplier: 1
-  walkSpeed: 0
-  sprintSpeed: 0
-  jumpKey: 32
-  playerHeight: 2
-  whatIsGround:
-    serializedVersion: 2
-    m_Bits: 64
-  orientation: {fileID: 8051542978551117170}
-  yLimit: {x: -90, y: 90}
-  _mainCamera: {fileID: 6182619775650601272}
-  _targetRotation: 0
-  speedRotation: 180
+  dnaImg:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  dnaImgEndScreen:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}

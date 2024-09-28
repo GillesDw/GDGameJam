@@ -8,9 +8,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject endGameScreen, gameOverScreen;
     [SerializeField] GameObject exitButton, restartButton;
 
-    [SerializeField] AudioSource ambienceSrc, footstepsSrc, breathSrc, flashlightSrc, throwableItem, blindedEnemySrc, bearEnemySrc, stalkerSrc, coughSrc, enemiesFootstepSrc;
-    //[SerializeField] List<AudioClip> ambienceClip, breathClip,footstepsClip, flashlightClip, throwableItemClip, coughClip, thrillClip, stalkerWhispersClip, bearScreamClip, blindedScreamClip;
-    [SerializeField] AudioClip riser;
+    [SerializeField] AudioSource ambienceSrc, clothSrc, footstepsSrc, breathSrc, flashlightSrc, throwableItem, blindedEnemySrc, bearEnemySrc, stalkerSrc, coughSrc, enemiesFootstepSrc;
+    //[SerializeField] List<AudioClip> ambienceClip, clothClip, breathClip,footstepsClip, flashlightClip, throwableItemClip, coughClip, thrillClip, stalkerWhispersClip, bearScreamClip, blindedScreamClip;
 
     private void Start()
     {
