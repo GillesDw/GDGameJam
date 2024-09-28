@@ -25,6 +25,7 @@ public class HidingSpot : MonoBehaviour, IInteractable
         player.position = transform.position;
         PlayerMovementTutorial.playerMovementEnabled = false;
         currentlyHiding = true;
+        PlayerMovementTutorial.IsHiding = true;
     }
 
     public void Exit()
@@ -33,5 +34,6 @@ public class HidingSpot : MonoBehaviour, IInteractable
         playerRb.isKinematic = false;
         PlayerMovementTutorial.playerMovementEnabled = true;
         currentlyHiding = false;
+        PlayerMovementTutorial.IsHiding = false;
     }
 }
