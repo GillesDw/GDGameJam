@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance { get; private set; }
 
     [SerializeField] GameObject endGameScreen, gameOverScreen;
-    [SerializeField] GameObject exitButton, restartButton, noteUi;
+    [SerializeField] GameObject exitButton, restartButton, noteUi, Text01, Text02;
 
     [SerializeField] AudioSource hideSrc, ambienceSrc, clothSrc, footstepsSrc, breathSrc, flashlightSrc, throwableItem, bearEnemySrc, stalkerSrc, coughSrc, enemiesFootstepSrc;
     [SerializeField] AudioClip[] clothClip, breathClip, footstepsClip, flashlightClip, throwableItemClip, coughClip, thrillClip, stalkerWhispersClip, bearScreamClip, blindedScreamClip;
@@ -20,6 +20,16 @@ public class GameManager : MonoBehaviour
 
     public void EndOfTheGame()
     {
+        if (DNAManager.currentDnaCount == 3)
+        {
+            Text02.SetActive(true);
+            Text01.SetActive(false);
+        }
+        else 
+        {
+            Text01.SetActive(true);
+            Text02.SetActive(false);
+        }
         PlayerMovementTutorial.playerMovementEnabled = false;
         PlayerMovementTutorial.playerRotationEnabled = false;
         endGameScreen.SetActive(true);

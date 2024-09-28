@@ -56,7 +56,7 @@ public class Torch : MonoBehaviour
            if (Physics.Raycast(r, out RaycastHit hitInfo, 100))
            {
                 if(hitInfo.transform.CompareTag("Stalker")) {
-                    StalkerScript.HitByLight = true;
+                    //StalkerScript.HitByLight = true;
                     Debug.Log("hit by light");
                 }
            }
