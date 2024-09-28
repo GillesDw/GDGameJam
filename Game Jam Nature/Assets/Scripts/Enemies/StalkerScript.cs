@@ -21,7 +21,7 @@ public class StalkerScript : MonoBehaviour
     [SerializeField] Transform player;
     List<Vector3> playerLocations = new();
 
-    public bool HitByLight = false;
+    public static bool HitByLight = false;
     private Coroutine _shootingCoroutine;
     private bool _isChargingShot;
 
@@ -34,6 +34,7 @@ public class StalkerScript : MonoBehaviour
     // PRIVATE
     void Start()
     {
+        playerLocations.Add(player.transform.position);
     }
 
     void Update()

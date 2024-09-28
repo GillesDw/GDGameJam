@@ -276,6 +276,10 @@ PrefabInstance:
       value: 3983
       objectReference: {fileID: 0}
     - target: {fileID: 6721223905724803831, guid: b18e414d4803fac44adb9dc7cb64ecf4, type: 3}
+      propertyPath: camera
+      value: 
+      objectReference: {fileID: 14368540}
+    - target: {fileID: 6721223905724803831, guid: b18e414d4803fac44adb9dc7cb64ecf4, type: 3}
       propertyPath: 'flashlightBattery.Array.data[0]'
       value: 
       objectReference: {fileID: 731913522}
@@ -4033,6 +4037,17 @@ MonoBehaviour:
   gameOverScreen: {fileID: 1271047314}
   exitButton: {fileID: 1550550935}
   restartButton: {fileID: 429922076}
+  ambienceSrc: {fileID: 0}
+  footstepsSrc: {fileID: 0}
+  breathSrc: {fileID: 0}
+  flashlightSrc: {fileID: 0}
+  throwableItem: {fileID: 0}
+  blindedEnemySrc: {fileID: 0}
+  bearEnemySrc: {fileID: 0}
+  stalkerSrc: {fileID: 0}
+  coughSrc: {fileID: 0}
+  enemiesFootstepSrc: {fileID: 0}
+  riser: {fileID: 0}
 --- !u!1001 &1764680471
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5214,6 +5229,67 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2108870308}
   m_CullTransparentMesh: 1
+--- !u!1001 &2340732158660493342
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7971997570333746540, guid: c3e762f396ae11a44a6b2401849ab023, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 14368541}
+    - target: {fileID: 8345397234987554275, guid: c3e762f396ae11a44a6b2401849ab023, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.3056016
+      objectReference: {fileID: 0}
+    - target: {fileID: 8345397234987554275, guid: c3e762f396ae11a44a6b2401849ab023, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.00000023841858
+      objectReference: {fileID: 0}
+    - target: {fileID: 8345397234987554275, guid: c3e762f396ae11a44a6b2401849ab023, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 11.408672
+      objectReference: {fileID: 0}
+    - target: {fileID: 8345397234987554275, guid: c3e762f396ae11a44a6b2401849ab023, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8345397234987554275, guid: c3e762f396ae11a44a6b2401849ab023, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8345397234987554275, guid: c3e762f396ae11a44a6b2401849ab023, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8345397234987554275, guid: c3e762f396ae11a44a6b2401849ab023, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8345397234987554275, guid: c3e762f396ae11a44a6b2401849ab023, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8345397234987554275, guid: c3e762f396ae11a44a6b2401849ab023, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8345397234987554275, guid: c3e762f396ae11a44a6b2401849ab023, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8690573154864959321, guid: c3e762f396ae11a44a6b2401849ab023, type: 3}
+      propertyPath: m_Name
+      value: Wheelbarrow Walk (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c3e762f396ae11a44a6b2401849ab023, type: 3}
 --- !u!1001 &3732407195330841910
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5371,3 +5447,4 @@ SceneRoots:
   - {fileID: 858848881}
   - {fileID: 1091976714}
   - {fileID: 1749989195}
+  - {fileID: 2340732158660493342}
