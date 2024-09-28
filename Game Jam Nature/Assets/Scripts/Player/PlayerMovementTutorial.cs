@@ -77,6 +77,18 @@ public class PlayerMovementTutorial : MonoBehaviour
             _mainCamera.transform.rotation = Quaternion.Euler(_targetRotation,
             _mainCamera.transform.rotation.eulerAngles.y, _mainCamera.transform.rotation.eulerAngles.z);
         }
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.W))
+        {
+            if (timerF <= 0)
+            {
+                GameManager.instance.footstepsPlayer();
+            }
+            timerF += Time.deltaTime;
+            if (timerF >= 0.6f)
+            {
+                timerF = 0;
+            }
+        }
     }
 
     private void FixedUpdate()
@@ -101,6 +113,8 @@ public class PlayerMovementTutorial : MonoBehaviour
 
             Invoke(nameof(ResetJump), jumpCooldown);
         }
+
+
     }
     float timerF = 0;
     private void MovePlayer()
@@ -112,15 +126,7 @@ public class PlayerMovementTutorial : MonoBehaviour
         if (IsHiding == false)
         {
             rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
-            if(timerF <= 0)
-            {
-                GameManager.instance.footstepsPlayer();
-            }
-            timerF += Time.deltaTime;
-            if(timerF >= 0.6f)
-            {
-                timerF = 0;
-            }
+
         }
 
         // in air
