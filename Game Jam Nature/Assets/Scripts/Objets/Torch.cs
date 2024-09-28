@@ -12,6 +12,7 @@ public class Torch : MonoBehaviour
     [SerializeField] private float maxFlashlightBatteryTime = 10;
     [SerializeField] private float flashlightBatteryTimeRecharge1Bar = 1;
     float currentReloadingTime = 0;
+    [SerializeField] Camera camera;
     private void Awake()
     {
         flashlightBatteryTimeLeft = maxFlashlightBatteryTime;
@@ -44,6 +45,15 @@ public class Torch : MonoBehaviour
         if(flashlightTurnOn == true)
         {
             flashlightBatteryTimeLeft -= Time.deltaTime;
+
+           Ray r = new Ray(camera.transform.position, camera.transform.forward);
+           if (Physics.Raycast(r, out RaycastHit hitInfo, 100))
+           {
+                if(hitInfo.transform.CompareTag("Stalker")) {
+                    StalkerScript.HitByLight = true;
+                    Debug.Log("hit by light");
+                }
+           }
         }
 
         //Flashlight time life
