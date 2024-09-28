@@ -3,7 +3,7 @@ using System.Drawing;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class GroundEnemy : MonoBehaviour
+public class RunningEnemy : MonoBehaviour
 {
     [Header("Enemy")]
     [Header("Moving")]

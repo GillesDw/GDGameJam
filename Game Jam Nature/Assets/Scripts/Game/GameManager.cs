@@ -1,3 +1,4 @@
+using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -50,5 +51,10 @@ public class GameManager : MonoBehaviour
         Cursor.visible = false;
         PlayerMovementTutorial.playerMovementEnabled = true;
         PlayerMovementTutorial.playerRotationEnabled = true;
+    }
+
+    public void AmbienceCave()
+    {
+
     }
 }

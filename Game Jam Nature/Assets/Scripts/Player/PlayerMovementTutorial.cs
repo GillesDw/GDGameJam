@@ -42,7 +42,7 @@ public class PlayerMovementTutorial : MonoBehaviour
     [SerializeField] float speedRotation = 180f;
 
     public static bool IsHiding = false;
-
+    public static bool playerRotationEnabled = true;
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -69,11 +69,14 @@ public class PlayerMovementTutorial : MonoBehaviour
         else
             rb.linearDamping = 0;
 
-        _targetRotation -= Input.GetAxis("Mouse Y") * speedRotation * Time.deltaTime;
-        _targetRotation = Mathf.Clamp(_targetRotation, yLimit.x, yLimit.y);
-        transform.Rotate(0, Input.GetAxis("Mouse X") * speedRotation * Time.deltaTime, 0);
-        _mainCamera.transform.rotation = Quaternion.Euler(_targetRotation,
-        _mainCamera.transform.rotation.eulerAngles.y, _mainCamera.transform.rotation.eulerAngles.z);
+        if(playerRotationEnabled == true)
+        {
+            _targetRotation -= Input.GetAxis("Mouse Y") * speedRotation * Time.deltaTime;
+            _targetRotation = Mathf.Clamp(_targetRotation, yLimit.x, yLimit.y);
+            transform.Rotate(0, Input.GetAxis("Mouse X") * speedRotation * Time.deltaTime, 0);
+            _mainCamera.transform.rotation = Quaternion.Euler(_targetRotation,
+            _mainCamera.transform.rotation.eulerAngles.y, _mainCamera.transform.rotation.eulerAngles.z);
+        }
     }
 
     private void FixedUpdate()
