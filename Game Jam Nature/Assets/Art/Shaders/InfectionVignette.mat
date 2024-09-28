@@ -46,6 +46,6 @@ Material:
     - _Vignette_Smoothness: 0.5
     - _Vignette_Speed: 6.74
     m_Colors:
-    - _Tint: {r: 0.65195984, g: 0.120762475, b: 0.8930817, a: 0}
+    - _Tint: {r: 0.15973486, g: 0.05676195, b: 0.44025147, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1

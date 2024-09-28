@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4110020297241695085}
   - component: {fileID: 2228524143969331111}
   - component: {fileID: 584661256539449536}
+  - component: {fileID: 44336496588785639}
   m_Layer: 0
   m_Name: Cabin04
   m_TagString: Untagged
@@ -109,3 +110,24 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 7226606657035050250, guid: 932f38df338f46e44a5bf6f3549bd2c5, type: 3}
+--- !u!65 &44336496588785639
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 427193900743247474}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.24949855, y: 0.2834036, z: 0.17637305}
+  m_Center: {x: 0.041638773, y: 0.027484644, z: -0.057295695}
