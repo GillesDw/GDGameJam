@@ -105,5 +105,33 @@ public class GameManager : MonoBehaviour
         Cursor.visible = false;
         Debug.Log("return button pressed");
     }
+
+
+    public void CoughSFX1()
+    {
+        coughSrc.clip = coughClip[0];
+        coughSrc.Play();
+    }
+
+    public void CoughSFX2()
+    {
+        coughSrc.clip = coughClip[1];
+        coughSrc.Play();
+    }
+    public void CoughSFX3()
+    {
+        coughSrc.clip = coughClip[2];
+        coughSrc.Play();
+    }
+    public void CoughSFX4()
+    {
+        coughSrc.clip = coughClip[3];
+        coughSrc.Play();
+    }
+    public void CoughSFX5()
+    {
+        coughSrc.clip = coughClip[4];
+        coughSrc.Play();
+    }
 }
 

@@ -63,6 +63,7 @@ MonoBehaviour:
   gameOverScreen: {fileID: 0}
   exitButton: {fileID: 0}
   restartButton: {fileID: 0}
+  noteUi: {fileID: 0}
   hideSrc: {fileID: 0}
   ambienceSrc: {fileID: 0}
   clothSrc: {fileID: 0}
@@ -93,7 +94,12 @@ MonoBehaviour:
   - {fileID: 8300000, guid: a291be4e003fd8b4a8f4632eaa5a04bf, type: 3}
   - {fileID: 8300000, guid: f5dcc081bf5a32041b8e8bacdc0f0dcc, type: 3}
   throwableItemClip: []
-  coughClip: []
+  coughClip:
+  - {fileID: 8300000, guid: 0131a7aade0cd5540a2c3f6968aecd2f, type: 3}
+  - {fileID: 8300000, guid: fc07b8f27b965884c8ea0fa4e5181162, type: 3}
+  - {fileID: 8300000, guid: c0623620b23610f4abc41b1d10e13106, type: 3}
+  - {fileID: 8300000, guid: 26324d776270a484ca3c99890eff3c85, type: 3}
+  - {fileID: 8300000, guid: afd3d0d1c28e93245a1a1ab6c41266bc, type: 3}
   thrillClip: []
   stalkerWhispersClip: []
   bearScreamClip: []
