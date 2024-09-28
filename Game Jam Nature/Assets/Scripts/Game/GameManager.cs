@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance { get; private set; }
 
     [SerializeField] GameObject endGameScreen, gameOverScreen;
-    [SerializeField] GameObject exitButton, restartButton;
+    [SerializeField] GameObject exitButton, restartButton, noteUi;
 
     [SerializeField] AudioSource hideSrc, ambienceSrc, clothSrc, footstepsSrc, breathSrc, flashlightSrc, throwableItem, bearEnemySrc, stalkerSrc, coughSrc, enemiesFootstepSrc;
     [SerializeField] AudioClip[] clothClip, breathClip, footstepsClip, flashlightClip, throwableItemClip, coughClip, thrillClip, stalkerWhispersClip, bearScreamClip, blindedScreamClip;
@@ -98,5 +98,12 @@ public class GameManager : MonoBehaviour
         footstepsSrc.Play();
     }
 
+    public void ReturnButton()
+    {
+        noteUi.SetActive(false);
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        Debug.Log("return button pressed");
+    }
 }
 

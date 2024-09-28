@@ -1,0 +1,104 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3437541436521559491
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1184118638221681158}
+  - component: {fileID: 4102036596631787006}
+  - component: {fileID: 8342567804863611419}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1184118638221681158
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3437541436521559491}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.513675, y: 0, z: 2.4521322}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4102036596631787006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3437541436521559491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ac14024310d54646bbe0fa1895da6dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infectionTime: 10000
+  infectionVignette: {fileID: 0}
+--- !u!114 &8342567804863611419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3437541436521559491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 478f5af60c3ef464b8b4b9bd31b12ca2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endGameScreen: {fileID: 0}
+  gameOverScreen: {fileID: 0}
+  exitButton: {fileID: 0}
+  restartButton: {fileID: 0}
+  hideSrc: {fileID: 0}
+  ambienceSrc: {fileID: 0}
+  clothSrc: {fileID: 0}
+  footstepsSrc: {fileID: 0}
+  breathSrc: {fileID: 0}
+  flashlightSrc: {fileID: 0}
+  throwableItem: {fileID: 0}
+  bearEnemySrc: {fileID: 0}
+  stalkerSrc: {fileID: 0}
+  coughSrc: {fileID: 0}
+  enemiesFootstepSrc: {fileID: 0}
+  clothClip: []
+  breathClip: []
+  footstepsClip:
+  - {fileID: 8300000, guid: 62731d4eec27a3b4ba5991abaa10710e, type: 3}
+  - {fileID: 8300000, guid: 9367b7695d594204c9706f9bfe0b2672, type: 3}
+  - {fileID: 8300000, guid: 0a7d0bf6d2ba03a4f88a95ccd5127c3b, type: 3}
+  - {fileID: 8300000, guid: 69d24484ba816374e998a674febc5011, type: 3}
+  - {fileID: 8300000, guid: f92d4b04d1f8a5e4d8ea1a25931a9122, type: 3}
+  - {fileID: 8300000, guid: a5e8c51ba9621e84c9fb4767f0715fab, type: 3}
+  - {fileID: 8300000, guid: 90d73651906286a49906911b8a165ec8, type: 3}
+  - {fileID: 8300000, guid: d0035a9407de27248b2d345b5d8cf75b, type: 3}
+  - {fileID: 8300000, guid: ac40d5158e65fc147805a8036db34665, type: 3}
+  - {fileID: 8300000, guid: 76d9e9f3b209e8f4aa809e0783195c6a, type: 3}
+  - {fileID: 8300000, guid: 5384e6aa773e9a24ea0b1560868c3230, type: 3}
+  flashlightClip:
+  - {fileID: 8300000, guid: 90b5f15cc40782b4f8a9f55e4fdff339, type: 3}
+  - {fileID: 8300000, guid: a291be4e003fd8b4a8f4632eaa5a04bf, type: 3}
+  - {fileID: 8300000, guid: f5dcc081bf5a32041b8e8bacdc0f0dcc, type: 3}
+  throwableItemClip: []
+  coughClip: []
+  thrillClip: []
+  stalkerWhispersClip: []
+  bearScreamClip: []
+  blindedScreamClip: []
+  ambienceCaveClip: {fileID: 8300000, guid: 84b2f7c9506f6bf49a2e1f5d3668d5d4, type: 3}
+  ambienceForestClip: {fileID: 8300000, guid: cee741499f326a94aa89346cda5c4119, type: 3}
+  ambienceVillageClip: {fileID: 8300000, guid: 6ec485ef20526f740aa07d4addef5bdd, type: 3}
+  doorClip: {fileID: 8300000, guid: 62ddce53fba342d4ea73a709278c9d65, type: 3}
