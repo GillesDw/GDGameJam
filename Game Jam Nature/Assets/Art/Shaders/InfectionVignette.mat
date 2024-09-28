@@ -39,13 +39,11 @@ Material:
     m_Floats:
     - _Blur: 0
     - _Vignette_Blur: 0
-    - _Vignette_Darkening: 0.6
-    - _Vignette_Intensity: 2
-    - _Vignette_Power: 2.12
-    - _Vignette_Radius: 1
-    - _Vignette_Smoothness: 0.5
-    - _Vignette_Speed: 7.98
+    - _Vignette_Darkening: 1
+    - _Vignette_Radius: 0.23
+    - _Vignette_Smoothness: 10
+    - _Vignette_Speed: 2.18
     m_Colors:
-    - _Tint: {r: 0.2877985, g: 0, b: 0.5534587, a: 1}
+    - _Tint: {r: 0.65195984, g: 0.120762475, b: 0.8930817, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
