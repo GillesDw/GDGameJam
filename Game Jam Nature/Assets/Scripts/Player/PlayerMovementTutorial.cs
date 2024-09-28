@@ -102,18 +102,29 @@ public class PlayerMovementTutorial : MonoBehaviour
             Invoke(nameof(ResetJump), jumpCooldown);
         }
     }
-
+    float timerF = 0;
     private void MovePlayer()
     {
         // calculate movement direction
         moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
 
         // on ground
-        if(grounded)
+        if (IsHiding == false)
+        {
             rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
+            if(timerF <= 0)
+            {
+                GameManager.instance.footstepsPlayer();
+            }
+            timerF += Time.deltaTime;
+            if(timerF >= 0.6f)
+            {
+                timerF = 0;
+            }
+        }
 
         // in air
-        else if(!grounded)
+        else if (!grounded)
             rb.AddForce(moveDirection.normalized * moveSpeed * 10f * airMultiplier, ForceMode.Force);
     }
 

@@ -20,6 +20,7 @@ public class HidingSpot : MonoBehaviour, IInteractable
 
     public void Hide()
     {
+        GameManager.instance.DoorSfx();
         exitPos = player.position;
         playerRb.isKinematic = true;
         player.position = transform.position;
@@ -30,6 +31,7 @@ public class HidingSpot : MonoBehaviour, IInteractable
 
     public void Exit()
     {
+        GameManager.instance.DoorSfx();
         player.position= exitPos;
         playerRb.isKinematic = false;
         PlayerMovementTutorial.playerMovementEnabled = true;

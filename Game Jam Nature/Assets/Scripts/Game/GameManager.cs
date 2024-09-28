@@ -9,9 +9,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject endGameScreen, gameOverScreen;
     [SerializeField] GameObject exitButton, restartButton;
 
-    [SerializeField] AudioSource ambienceSrc, clothSrc, footstepsSrc, breathSrc, flashlightSrc, throwableItem, blindedEnemySrc, bearEnemySrc, stalkerSrc, coughSrc, enemiesFootstepSrc;
-    //[SerializeField] List<AudioClip> ambienceClip, clothClip, breathClip,footstepsClip, flashlightClip, throwableItemClip, coughClip, thrillClip, stalkerWhispersClip, bearScreamClip, blindedScreamClip;
-
+    [SerializeField] AudioSource hideSrc, ambienceSrc, clothSrc, footstepsSrc, breathSrc, flashlightSrc, throwableItem, bearEnemySrc, stalkerSrc, coughSrc, enemiesFootstepSrc;
+    [SerializeField] AudioClip[] clothClip, breathClip, footstepsClip, flashlightClip, throwableItemClip, coughClip, thrillClip, stalkerWhispersClip, bearScreamClip, blindedScreamClip;
+    [SerializeField] AudioClip ambienceCaveClip, ambienceForestClip, ambienceVillageClip, doorClip;
     private void Start()
     {
         endGameScreen.SetActive(false);
@@ -55,6 +55,47 @@ public class GameManager : MonoBehaviour
 
     public void AmbienceCave()
     {
+        ambienceSrc.clip = ambienceCaveClip;
+        ambienceSrc.Play();
+    }
+    public void AmbienceForest()
+    {
+        ambienceSrc.clip = ambienceForestClip;
+        ambienceSrc.Play();
+    }
+    public void AmbienceVillage()
+    {
+        ambienceSrc.clip = ambienceVillageClip;
+        ambienceSrc.Play();
+    }
 
+    public void DoorSfx()
+    {
+        hideSrc.clip = doorClip;
+        hideSrc.Play();
+    }
+
+    public void FlashlightOn()
+    {
+        flashlightSrc.clip = flashlightClip[0];
+        flashlightSrc.Play();
+    }
+    public void FlashlightOff()
+    {
+        flashlightSrc.clip = flashlightClip[1];
+        flashlightSrc.Play();
+    }
+    public void FlashlightRecharge()
+    {
+        flashlightSrc.clip = flashlightClip[2];
+        flashlightSrc.Play();
+    }
+
+    public void footstepsPlayer()
+    {
+        int rand = Random.Range(0, footstepsClip.Length-1);
+        footstepsSrc.clip = footstepsClip[rand];
+        footstepsSrc.Play();
     }
 }
+

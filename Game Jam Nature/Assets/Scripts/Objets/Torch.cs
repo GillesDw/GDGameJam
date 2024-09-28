@@ -25,6 +25,8 @@ public class Torch : MonoBehaviour
         flashlight.SetActive(false);
     }
 
+    float timer = 0;
+
     private void Update()
     {
         if (flashlightBatteryTimeLeft > 0)
@@ -33,11 +35,13 @@ public class Torch : MonoBehaviour
             {
                 if (flashlightTurnOn != true)
                 {
+                    GameManager.instance.FlashlightOn();
                     flashlight.SetActive(true);
                     flashlightTurnOn = true;
                 }
                 else
                 {
+                    GameManager.instance.FlashlightOff();
                     flashlight.SetActive(false);
                     flashlightTurnOn = false;
                 }
@@ -71,8 +75,20 @@ public class Torch : MonoBehaviour
         {
             RechargeFlashlight();
             handle.transform.Rotate(0, rotationSpeed, 0);
-
-
+            if(timer <= 0.02)
+            {
+                GameManager.instance.FlashlightRecharge();
+            }
+            if(timer >= 2.1f)
+            {
+                timer = 0;
+            }
+            Debug.Log(timer);
+            timer += Time.deltaTime;
+        }
+        else
+        {
+            timer = 0;
         }
     }
 
