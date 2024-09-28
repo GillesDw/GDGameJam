@@ -36,13 +36,12 @@ public class PlayerMovementTutorial : MonoBehaviour
     Rigidbody rb;
 
     public static bool playerMovementEnabled = true;
-    public static bool playerRotationEnabled = true;
     [SerializeField] Vector2 yLimit = new Vector2(-90, 90);
     [SerializeField] Camera _mainCamera;
     [SerializeField] float _targetRotation = 0;
     [SerializeField] float speedRotation = 180f;
 
-    bool walkEnabled = false;
+    public static bool IsHiding = false;
 
     private void Start()
     {
@@ -70,22 +69,11 @@ public class PlayerMovementTutorial : MonoBehaviour
         else
             rb.linearDamping = 0;
 
-        if (playerRotationEnabled == true)
-        {
-            _targetRotation -= Input.GetAxis("Mouse Y") * speedRotation * Time.deltaTime;
-            _targetRotation = Mathf.Clamp(_targetRotation, yLimit.x, yLimit.y);
-            transform.Rotate(0, Input.GetAxis("Mouse X") * speedRotation * Time.deltaTime, 0);
-            _mainCamera.transform.rotation = Quaternion.Euler(_targetRotation,
-            _mainCamera.transform.rotation.eulerAngles.y, _mainCamera.transform.rotation.eulerAngles.z);
-        }
-
-        if (Input.GetKeyDown(KeyCode.LeftShift))
-        {
-            if (walkEnabled != true)
-            {
-                walkEnabled = true;
-            }
-        }
+        _targetRotation -= Input.GetAxis("Mouse Y") * speedRotation * Time.deltaTime;
+        _targetRotation = Mathf.Clamp(_targetRotation, yLimit.x, yLimit.y);
+        transform.Rotate(0, Input.GetAxis("Mouse X") * speedRotation * Time.deltaTime, 0);
+        _mainCamera.transform.rotation = Quaternion.Euler(_targetRotation,
+        _mainCamera.transform.rotation.eulerAngles.y, _mainCamera.transform.rotation.eulerAngles.z);
     }
 
     private void FixedUpdate()
@@ -118,19 +106,11 @@ public class PlayerMovementTutorial : MonoBehaviour
         moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
 
         // on ground
-        if (grounded)
-        {
-            if (walkEnabled != true)
-            {
-                rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
-            }
-            else
-            {
-                rb.AddForce(moveDirection.normalized * moveSpeed * 5f, ForceMode.Force);
-            }
-        }
+        if(grounded)
+            rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
+
         // in air
-        else if (!grounded)
+        else if(!grounded)
             rb.AddForce(moveDirection.normalized * moveSpeed * 10f * airMultiplier, ForceMode.Force);
     }
 
