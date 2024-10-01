@@ -14,12 +14,7 @@ public class DNAManager : MonoBehaviour
 
     private void Start()
     {
-        dnaImg[0].SetActive(false);
-        dnaImg[1].SetActive(false);
-        dnaImg[2].SetActive(false);
-        dnaImgEndScreen[0].SetActive(false);
-        dnaImgEndScreen[1].SetActive(false);
-        dnaImgEndScreen[2].SetActive(false);
+
     }
 
     private void Update()

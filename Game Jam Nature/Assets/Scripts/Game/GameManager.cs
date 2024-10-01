@@ -116,7 +116,6 @@ public class GameManager : MonoBehaviour
         Debug.Log("return button pressed");
     }
 
-
     public void CoughSFX1()
     {
         coughSrc.clip = coughClip[0];

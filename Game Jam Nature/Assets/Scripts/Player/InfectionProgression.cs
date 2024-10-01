@@ -42,13 +42,13 @@ public class InfectionProgression : MonoBehaviour
         infectionTime -= Time.deltaTime;
         if(infectionTime <= firstLevelOfInfectionTime && infectionTime > secondLevelOfInfectionTime)
         {
-            infectionVignette.SetFloat("_Vignette_Radius", Mathf.Lerp(1f,0.8f,2));
+            infectionVignette.SetFloat("_Vignette_Radius", Mathf.Lerp(1f,0.7f,2));
             infectionVignette.SetFloat("_Vignette_Darkening", Mathf.Lerp(0.5f, 0.1f, 2));
 
         }
         if(infectionTime <= secondLevelOfInfectionTime && infectionTime > thirdLevelOfInfectionTime)
         {
-            infectionVignette.SetFloat("_Vignette_Radius", Mathf.Lerp(0.8f, 0.6f, 2));
+            infectionVignette.SetFloat("_Vignette_Radius", Mathf.Lerp(0.7f, 0.6f, 2));
             infectionVignette.SetFloat("_Vignette_Darkening", 0.5f);
             infectionVignette.SetFloat("_Vignette_Speed", 4f);
 
